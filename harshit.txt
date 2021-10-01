@@ -1,0 +1,13 @@
+clc;
+clear all;
+d = input('enter diameter in cm:');
+r1 = d/2;
+rad = r1*10^(-2);
+d = input('enter distance between conductors in m:');
+r1 = rad*0.7788;
+L = 2*10^(-7)*log(d/r1)
+L1 = L*10^6;
+c = (2*pi*8.854*10^(-12))/(log(d/rad));
+c1 = c*10^6;
+fprintf('\n value of inductance = %f h/m \n', L1);
+fprintf('\n value of capacitance = %f F/m \n', c1)
